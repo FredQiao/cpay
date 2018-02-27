@@ -21,7 +21,7 @@ public class HelloController {
     @ApiOperation(value = "")
     @RequestMapping(value = "/hello/{word}", method = RequestMethod.GET)
     public String sayHello(@PathVariable String word, Model model) {
-        model.addAttribute("name", word);
+        model.addAttribute("name", helloService.hello(word));
         return "hello";
     }
 }

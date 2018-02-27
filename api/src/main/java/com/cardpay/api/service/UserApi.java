@@ -20,8 +20,8 @@ public class UserApi {
 
     @ApiOperation(value = "")
     @RequestMapping(value = "/name/{word}", method = RequestMethod.GET)
-    public User getByName(@PathVariable String name){
-        return userService.findUserByName(name);
+    public User getByName(@PathVariable String word){
+        return userService.findUserByName(word);
     }
 
 }
